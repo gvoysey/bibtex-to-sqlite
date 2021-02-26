@@ -10,9 +10,38 @@ dataset = "^1.4.5"
 bibtexparser = "^1.2.0"
 typer = "^0.3.2"
 
+[tool.poetry.scripts]
+bibtex-to-sqlite = "bibtex_to_sqlite.__main__:app"
+
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+skip='venv'
+profile='black'
+
+[tool.black]
+line-length = 120
+target-version = ['py36','py37', 'py38']
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \.env
+    | \venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
