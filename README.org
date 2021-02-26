@@ -1,0 +1,25 @@
+* bibtex to sqlite
+
+(early days...)
+
+A quick converter for bibtex databases to sqlite.  It requires at least Python 3.6
+
+Handy if you want to look at your library in [[https://datasette.io][datasette]]!
+
+* usage
+#+begin_src text
+Usage: bibtex-to-sqlite [OPTIONS] BIBTEX_FILE SQLITE_FILE
+
+  Convert a bibtex file to sqlite
+
+Arguments:
+  BIBTEX_FILE  [required]
+  SQLITE_FILE  [required]
+
+Options:
+  --install-completion  Install completion for the current shell.
+  --show-completion     Show completion for the current shell, to copy it or
+                        customize the installation.
+
+  --help                Show this message and exit.
+#+end_src

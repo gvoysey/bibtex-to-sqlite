@@ -8,7 +8,7 @@ authors = ["Graham Voysey <graham@neurala.com>"]
 python = "^3.8"
 dataset = "^1.4.5"
 bibtexparser = "^1.2.0"
-typer = "^0.3.2"
+typer = {extras = ["all"], version = "^0.3.2"}
 
 [tool.poetry.scripts]
 bibtex-to-sqlite = "bibtex_to_sqlite.__main__:app"
